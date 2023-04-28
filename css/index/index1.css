@@ -1,0 +1,3652 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2&family=GFS+Didot&family=Noto+Sans+TC&family=Noto+Serif+TC&display=swap");
+html {
+  overflow: -moz-hidden-unscrollable;
+  height: 100%;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body :root {
+  --textColor1:#ffffff;
+}
+body .navBar {
+  display: none;
+  opacity: 0;
+  animation: navOut 1s ease-in-out;
+  animation-fill-mode: forwards;
+}
+body .navBarOpen {
+  display: flex;
+  opacity: 0;
+  animation: navIn 1s ease-in-out;
+  animation-fill-mode: forwards;
+}
+body nav {
+  position: fixed;
+  right: calc(100vw - 96.5%);
+  background-color: transparent;
+  color: aliceblue;
+  z-index: 3;
+  height: 100vh;
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+body nav #logo {
+  writing-mode: vertical-lr;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 10px;
+  font-family: "GFS Didot", serif;
+  transform: translateX(2px);
+}
+body nav #navContent {
+  padding: 0px;
+  width: 80px;
+  height: 40vh;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  writing-mode: vertical-lr;
+}
+body nav #navContent li {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  cursor: pointer;
+}
+body nav #navContent li a {
+  text-decoration: none;
+  color: var(--textColor1);
+  font-size: 16px;
+  letter-spacing: 15px;
+  font-family: "Noto Serif TC", serif;
+}
+body nav #navLink {
+  writing-mode: vertical-lr;
+  width: 80px;
+  padding: 0px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+body nav #navLink li a {
+  text-decoration: none;
+  color: var(--textColor1);
+  letter-spacing: 5px;
+  font-family: "GFS Didot", serif;
+  font-size: 16px;
+}
+body nav .navBarInner {
+  position: absolute;
+  z-index: 3;
+  height: 50vh;
+  width: 80px;
+  right: 99%;
+  top: 18.6%;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(0px);
+  transition: transform 1s ease-in-out;
+}
+body nav .navBarInner ul {
+  position: absolute;
+  right: 15%;
+  list-style: none;
+  width: 80px;
+  height: 26.5vh;
+  writing-mode: vertical-lr;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+body nav .navBarInner ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body nav .navBarInner ul li .navColor {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  letter-spacing: 15px;
+  font-family: "Noto Serif TC", serif;
+}
+body nav .navBarInner #InnerBarLine1 {
+  position: absolute;
+  content: "";
+  background-color: #ffffff;
+  height: 225px;
+  width: 0.5px;
+  top: 14%;
+  right: 80%;
+}
+body nav .navBarInner #InnerBarLine2 {
+  position: absolute;
+  content: "";
+  background-color: #ffffff;
+  height: 0.5px;
+  width: 100px;
+  top: 22%;
+  right: 0%;
+}
+body nav .navBarInnerAnimaiton {
+  display: none;
+  opacity: 0;
+  animation: navbarAeOut 1s ease-in-out;
+  animation-fill-mode: forwards;
+}
+body nav .Open {
+  display: flex;
+  opacity: 0;
+  animation: navbarAeIn 1s ease-in-out;
+  animation-fill-mode: forwards;
+}
+@keyframes navbarAeIn {
+  0% {
+    display: none;
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    display: flex;
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes navbarAeOut {
+  0% {
+    display: flex;
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  100% {
+    display: none;
+    opacity: 0;
+    transform: translateX(20px);
+  }
+}
+body nav::after {
+  position: absolute;
+  content: "";
+  width: 0.5px;
+  height: 90vh;
+  background-color: aliceblue;
+  left: calc(0% - 5px);
+}
+body #videoContainer {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body #videoContainer video {
+  position: absolute;
+  min-height: 100%;
+  background-position: center center;
+  background-size: cover;
+}
+body #videoContainer .viedoLiner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(26, 24, 24, 0.229);
+}
+body .full-screen {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+body #homepageContainer3 {
+  position: relative;
+  overflow-x: hidden;
+  /* #masthead {
+    position: fixed;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    z-index: 9999;
+  }
+  #masthead a {
+    padding: 1rem 2rem;
+  } */
+}
+body #homepageContainer3 .full-screen {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+body #homepageContainer3 #panels #panels-container {
+  height: 100vh;
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 0;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+body #homepageContainer3 #panels #panels-container .panel {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  color: #333;
+  text-align: left;
+}
+body #homepageContainer3 #panel-1 {
+  overflow: hidden;
+}
+body #homepageContainer3 #panel-1 #img1 {
+  height: 110vh;
+  width: 100%;
+  background-image: url("../../image/DSC_2584.jpg");
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+body #homepageContainer3 #panel-2 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body #homepageContainer3 #panel-2 #homepage3text1 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 200px;
+}
+body #homepageContainer3 #panel-2 #homepage3text1 h2 {
+  font-family: "Noto Serif TC", serif;
+  position: absolute;
+  text-align: center;
+  width: 40px;
+  height: 50px;
+  top: 20px;
+  left: 0px;
+  font-size: 35px;
+}
+body #homepageContainer3 #panel-2 #homepage3text1 h5 {
+  font-family: "Noto Serif TC", serif;
+  letter-spacing: 10px;
+  position: absolute;
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  top: 70px;
+  left: -12px;
+  font-size: 17px;
+}
+body #homepageContainer3 #panel-2 #homepage3text1 p {
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  top: 105px;
+  left: 0px;
+}
+body #homepageContainer3 #panel-3 #img2 {
+  height: 110vh;
+  width: 100%;
+  background-image: url("../../image/DSC_3079.jpg");
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+body #homepageContainer3 #panel-4 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body #homepageContainer3 #panel-4 #homepage3text2 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 200px;
+}
+body #homepageContainer3 #panel-4 #homepage3text2 h2 {
+  font-family: "Noto Serif TC", serif;
+  position: absolute;
+  text-align: center;
+  width: 40px;
+  height: 50px;
+  top: 20px;
+  left: 0px;
+  font-size: 35px;
+}
+body #homepageContainer3 #panel-4 #homepage3text2 h5 {
+  font-family: "Noto Serif TC", serif;
+  letter-spacing: 10px;
+  position: absolute;
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  top: 70px;
+  left: -12px;
+  font-size: 17px;
+}
+body #homepageContainer3 #panel-4 #homepage3text2 p {
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  top: 105px;
+  left: 0px;
+}
+body #homepageContainer3 #panel-5 #img3 {
+  height: 110vh;
+  width: 100%;
+  background-image: url("../../image/DSC_2784.jpg");
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+body #homepageContainer3 #panel-6 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body #homepageContainer3 #panel-6 #homepage3text3 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 200px;
+}
+body #homepageContainer3 #panel-6 #homepage3text3 h2 {
+  font-family: "Noto Serif TC", serif;
+  position: absolute;
+  text-align: center;
+  width: 40px;
+  height: 50px;
+  top: 20px;
+  left: 0px;
+  font-size: 35px;
+}
+body #homepageContainer3 #panel-6 #homepage3text3 h5 {
+  font-family: "Noto Serif TC", serif;
+  letter-spacing: 10px;
+  position: absolute;
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  top: 70px;
+  left: -12px;
+  font-size: 17px;
+}
+body #homepageContainer3 #panel-6 #homepage3text3 p {
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  top: 105px;
+  left: 0px;
+}
+body #homepageContainer4 {
+  height: 110vh;
+  width: 100%;
+  background-color: white;
+  position: relative;
+}
+body #homepageContainer4 #panel-6 {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body #homepageContainer4 #panel-6 #homepage4text1 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 200px;
+  top: 5%;
+}
+body #homepageContainer4 #panel-6 #homepage4text1 h2 {
+  font-family: "Noto Serif TC", serif;
+  position: absolute;
+  text-align: center;
+  width: 40px;
+  height: 50px;
+  top: 20px;
+  left: 0px;
+  font-size: 35px;
+}
+body #homepageContainer4 #panel-6 #homepage4text1 h5 {
+  font-family: "Noto Serif TC", serif;
+  letter-spacing: 10px;
+  position: absolute;
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  top: 70px;
+  left: -12px;
+  font-size: 17px;
+}
+body #homepageContainer4 #panel-6 #homepage4text1 p {
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  top: 105px;
+  left: 0px;
+}
+@keyframes navIn {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes navOut {
+  0% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #phoneNav {
+    position: fixed;
+    z-index: 10;
+    height: 8vh;
+    width: 100%;
+    background-color: #EFEFEF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #phoneNav #phnoeNavLogo {
+    font-family: "GFS Didot", serif;
+    font-size: 25px;
+    letter-spacing: 10px;
+    margin-left: 10%;
+  }
+  #phoneNav #hambergurCheckbox {
+    display: none;
+  }
+  #phoneNav #hambergurCheckbox:checked + label .hambergur span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 5px;
+    transition: top 0.3s ease-in-out, transform 0.3s ease-in-out 0.3s;
+  }
+  #phoneNav #hambergurCheckbox:checked + label .hambergur span:nth-child(2) {
+    transform: rotate(-45deg);
+    top: -5px;
+    transition: top 0.3s ease-in-out, transform 0.3s ease-in-out 0.3s;
+  }
+  #phoneNav .hambergur {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 30px;
+    height: 50px;
+    right: 50px;
+  }
+  #phoneNav .hambergur span {
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out 0.3s;
+    top: 0%;
+    background-color: #000000;
+  }
+  #phoneNav .hambergur span:nth-child(1) {
+    position: relative;
+    content: "";
+    margin-top: 10px;
+    height: 2px;
+    width: 30px;
+  }
+  #phoneNav .hambergur span:nth-child(2) {
+    position: relative;
+    content: "";
+    height: 2px;
+    width: 30px;
+    margin-bottom: 10px;
+  }
+  #phoneNav .phoneNavContent {
+    position: absolute;
+    background-color: #EFEFEF;
+    top: 8vh;
+    left: 0%;
+    width: 100%;
+    height: 99vh;
+    transform: scaleY(0);
+    transform-origin: 50% 0;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out 0.3s;
+    opacity: 0;
+  }
+  #phoneNav .phoneNavContent ul {
+    position: relative;
+    height: 80vh;
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-left: 10%;
+  }
+  #phoneNav .phoneNavContent ul li a {
+    color: #000000;
+    text-decoration: none;
+    font-family: "Noto Serif TC", serif;
+    letter-spacing: 40px;
+    font-size: 25px;
+  }
+  #phoneNav .phoneNavContent .Phoneicon {
+    position: absolute;
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    bottom: 5%;
+  }
+  #phoneNav .phoneNavContent .Phoneicon a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 25px;
+    font-family: "GFS Didot", serif;
+  }
+  #phoneNav #hambergurCheckbox:checked ~ .phoneNavContent {
+    transform: scaleY(1);
+    opacity: 1;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out 0.3s;
+  }
+  .videoText {
+    z-index: 2;
+    color: aliceblue;
+    font-family: "GFS Didot", serif;
+    font-size: 40px;
+    letter-spacing: 40px;
+  }
+  #homepage1Container {
+    position: relative;
+    height: 120vh;
+    width: 100%;
+    background-image: url("../../image/DSC_2951.jpg");
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  #homepage1Container .textA {
+    z-index: 2;
+    color: aliceblue;
+    color: aliceblue;
+  }
+  #homepage1Container #text1 {
+    position: absolute;
+    margin-top: 175px;
+    font-size: 60px;
+    font-family: "Noto Serif TC", serif;
+    writing-mode: vertical-lr;
+    letter-spacing: 200px;
+  }
+  #homepage1Container #text2 {
+    font-size: 12px;
+    position: absolute;
+    left: calc(100vw - 200px);
+    top: 20vh;
+    margin-bottom: 300px;
+    width: 101px;
+    height: 314px;
+    writing-mode: vertical-rl;
+    letter-spacing: 5px;
+    line-height: 25px;
+    font-family: "Noto Serif TC", serif;
+  }
+  #homepage1Container #text3 {
+    width: 250px;
+    height: 500px;
+    position: absolute;
+    margin-top: 150vh;
+    left: calc(100vw - 350px);
+  }
+  #homepage1Container #text3 h3 {
+    font-size: 30px;
+    letter-spacing: 7px;
+    border-bottom: 1px solid white;
+    text-align: center;
+  }
+  #homepage1Container #text3 p {
+    font-size: 10px;
+  }
+  #homepage1Container #text4 {
+    width: 300px;
+    height: 500px;
+    position: absolute;
+    right: calc(100vw - 380px);
+    top: 40vh;
+    cursor: pointer;
+  }
+  #homepage1Container #text4 h3 {
+    font-size: 30px;
+    letter-spacing: 5px;
+  }
+  #homepage1Container #text4 h5 {
+    position: relative;
+    margin-top: 30px;
+    letter-spacing: 5px;
+  }
+  #homepage1Container #text4 p {
+    margin-top: 20px;
+    font-size: 5px;
+    letter-spacing: 5px;
+    line-height: 25px;
+  }
+  #homepage1Container #text4 h5::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: -23%;
+    width: 50px;
+    height: 1px;
+    background-color: aliceblue;
+    z-index: 3;
+  }
+  #homepage1Container #text4 .line1 {
+    position: relative;
+    content: "";
+    width: 90px;
+    height: 1px;
+    background-color: aliceblue;
+    bottom: 24.6%;
+    left: 100%;
+    transform: translateX(-15px);
+    transition: transform 1s ease-in-out;
+  }
+  #homepage1Container #text4 .line1::after {
+    position: absolute;
+    content: "";
+    width: 5px;
+    height: 20px;
+    background-color: aliceblue;
+    border: none;
+    right: 5%;
+    transform: translateY(-15px);
+    transition: transform 1s ease-in-out;
+  }
+  #homepage1Container #text4:hover > .line1 {
+    transform: translateX(-2px);
+  }
+  #homepage1Container #text4:hover > .line1::after {
+    transform: translateY(-3px);
+  }
+  #homepageContainer2 {
+    position: relative;
+  }
+  #homepageContainer2 .homeAbout {
+    width: 100%;
+    background-color: #051216;
+  }
+  #homepageContainer2 .homeAbout .row {
+    height: 110vh;
+    width: 100%;
+  }
+  #homepageContainer2 .homeAbout .row #homepageContainer2Title {
+    font-family: "Noto Serif TC", serif;
+    width: 100%;
+    height: 120px;
+    writing-mode: vertical-rl;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 25px;
+    letter-spacing: 35px;
+  }
+  #homepageContainer2 .homeAbout .row #homepageContainer2Content1 {
+    font-family: "Noto Serif TC", serif;
+    width: 100%;
+    height: 40vh;
+    writing-mode: vertical-rl;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    letter-spacing: 5px;
+    line-height: 50px;
+    font-size: 18px;
+    flex-wrap: wrap;
+    position: relative;
+  }
+  #homepageContainer5 {
+    position: relative;
+    width: 100%;
+    background-color: #ffffff;
+  }
+  #homepageContainer5 #homepageContainer5Content {
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-left: 2vw;
+  }
+  #homepageContainer5 #homepageContainer5Content h3 {
+    font-family: "Noto Serif TC", serif;
+    text-align: center;
+    width: 90%;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 10px;
+    position: absolute;
+    top: calc(10vh - 0px);
+  }
+  #homepageContainer5 #homepageContainer5Content p {
+    font-family: "Noto Serif TC", serif;
+    text-align: center;
+    width: 75%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 10px;
+    line-height: 30px;
+    position: absolute;
+    top: calc(20vh - 0px);
+  }
+  #homepageContainer5 #homepageContainer5Image {
+    position: relative;
+    left: 0vw;
+  }
+  #homepageContainer5 #homepageContainer5Image a img {
+    width: 500px;
+  }
+  #homepageContainer5 #homepageContainer5Image .container5text {
+    height: 300px;
+    width: 400px;
+    position: relative;
+    top: 50px;
+    right: calc(11% - 100px);
+  }
+  #homepageContainer5 #homepageContainer5Image .container5text h4 {
+    font-family: "Noto Serif TC", serif;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #homepageContainer5 #homepageContainer5Image .container5text a p {
+    font-family: "Noto Serif TC", serif;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 25%;
+    letter-spacing: 10px;
+    font-size: 15px;
+    line-height: 40px;
+    color: #051216;
+  }
+  #homepageContainer5 #homepageContainer5Image .container5text p::after {
+    position: absolute;
+    content: "";
+    height: 1px;
+    width: 100px;
+    background-color: #051216;
+    bottom: calc(70% - 150px);
+    right: calc(15% - 50px);
+    transform: translateX(0px);
+    transition: transform 0.7s ease-in-out;
+  }
+  #homepageContainer5 #homepageContainer5Image .container5text p::before {
+    position: absolute;
+    content: "";
+    height: 30px;
+    width: 0.5px;
+    background-color: #051216;
+    bottom: calc(65% - 150px);
+    right: calc(12% - 30px);
+    transform: translateY(0px);
+    transition: transform 0.7s ease-in-out;
+  }
+  #homepageContainer5 #homepageContainer5Image .container5text a:hover > p::before {
+    transform: translateY(10px);
+  }
+  #homepageContainer5 #homepageContainer5Image .container5text a:hover > p::after {
+    transform: translateX(20px);
+  }
+  #homepageContainer6 {
+    margin-top: 10%;
+    width: 100%;
+    position: relative;
+    background-color: #EFEFEF;
+    display: flex;
+    align-items: center;
+  }
+  #homepageContainer6 .footerContainer {
+    width: 95%;
+  }
+  #homepageContainer6 .footerContainer #footer1 {
+    content: "";
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #homepageContainer6 .footerContainer #footer1 #footerlogo {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    writing-mode: horizontal-tb;
+    font-family: "GFS Didot", serif;
+    letter-spacing: 20px;
+    top: 8vh;
+    padding-left: 2%;
+    font-size: 25px;
+    text-align: center;
+  }
+  #homepageContainer6 .footerContainer #footer1 h4 {
+    position: absolute;
+    bottom: 50%;
+    letter-spacing: 5px;
+    font-family: "GFS Didot", serif;
+    font-size: 20px;
+  }
+  #homepageContainer6 .footerContainer #footer1 #footer1content {
+    position: absolute;
+    font-size: 16px;
+    letter-spacing: 5px;
+    font-family: "Noto Serif TC", serif;
+    line-height: 25px;
+    text-align: center;
+    top: 50%;
+  }
+  #homepageContainer6 .footerContainer #footer2 {
+    content: "";
+    width: 100%;
+    height: 50vh;
+    font-family: "GFS Didot", serif;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #homepageContainer6 .footerContainer #footer2 #follow {
+    text-align: center;
+    height: 50px;
+    margin: 0%;
+    margin-right: calc(1% - 17px);
+    font-size: 20px;
+    letter-spacing: 10px;
+  }
+  #homepageContainer6 .footerContainer #footer2 #footer2Content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 60%;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    background-color: #EFEFEF;
+    margin-left: calc(0% - 5px);
+  }
+  #homepageContainer6 .footerContainer #footer2 #footer2Content #footerFB {
+    font-size: 24px;
+    margin: 0%;
+    letter-spacing: 10px;
+    margin-right: calc(1% - 17px);
+  }
+  #homepageContainer6 .footerContainer #footer2 #footer2Content #footerFB a {
+    text-decoration: none;
+    color: #313131;
+    font-size: 26px;
+  }
+  #homepageContainer6 .footerContainer #footer2 #footer2Content #footerIG {
+    font-size: 24px;
+    margin: 0%;
+    letter-spacing: 10px;
+    margin-right: calc(1% - 17px);
+  }
+  #homepageContainer6 .footerContainer #footer2 #footer2Content #footerIG a {
+    text-decoration: none;
+    color: #313131;
+    font-size: 26px;
+  }
+  #homepageContainer6 .footerContainer #footer2 #footer2Content #footerLine {
+    content: "";
+    background-color: #000000;
+    height: 50%;
+    width: 1.5px;
+    margin: 0%;
+  }
+  #homepageContainer6 .footerContainer #footer3 {
+    content: "";
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #homepageContainer6 .footerContainer #footer3 #footerNav {
+    position: absolute;
+    writing-mode: vertical-lr;
+    width: 100%;
+    height: 100%;
+  }
+  #homepageContainer6 .footerContainer #footer3 #footerNav ul {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0%;
+    margin: 0%;
+    list-style: none;
+  }
+  #homepageContainer6 .footerContainer #footer3 #footerNav ul li a {
+    position: relative;
+    color: #000000;
+    text-decoration: none;
+    font-family: "Noto Serif TC", serif;
+    letter-spacing: 10px;
+  }
+  #homepageContainer6 .footerContainer #footer3 #footerNav ul li a::after {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 0.5px;
+    background-color: #000000;
+    top: calc(0% - 2px);
+    left: calc(0% - 5px);
+    opacity: 0;
+    transition: 1s ease-in-out;
+  }
+  #homepageContainer6 .footerContainer #footer3 #footerNav ul li a:hover::after {
+    opacity: 1;
+  }
+  #homepageContainer6 .footerContainer #footer3 #footerFinal {
+    height: 15vh;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 10vh;
+    left: 0vw;
+    font-family: "GFS Didot", serif;
+    font-size: 24px;
+    letter-spacing: 8px;
+  }
+}
+@media screen and (max-width: 960px) {
+  #phoneNav {
+    position: fixed;
+    z-index: 10;
+    height: 8vh;
+    width: 100%;
+    background-color: #EFEFEF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #phoneNav #phnoeNavLogo {
+    font-family: "GFS Didot", serif;
+    font-size: 25px;
+    letter-spacing: 10px;
+    margin-left: 10%;
+  }
+  #phoneNav #hambergurCheckbox {
+    display: none;
+  }
+  #phoneNav #hambergurCheckbox:checked + label .hambergur span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 5px;
+    transition: top 0.3s ease-in-out, transform 0.3s ease-in-out 0.3s;
+  }
+  #phoneNav #hambergurCheckbox:checked + label .hambergur span:nth-child(2) {
+    transform: rotate(-45deg);
+    top: -5px;
+    transition: top 0.3s ease-in-out, transform 0.3s ease-in-out 0.3s;
+  }
+  #phoneNav .hambergur {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 30px;
+    height: 50px;
+    right: 50px;
+  }
+  #phoneNav .hambergur span {
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out 0.3s;
+    top: 0%;
+    background-color: #000000;
+  }
+  #phoneNav .hambergur span:nth-child(1) {
+    position: relative;
+    content: "";
+    margin-top: 10px;
+    height: 2px;
+    width: 30px;
+  }
+  #phoneNav .hambergur span:nth-child(2) {
+    position: relative;
+    content: "";
+    height: 2px;
+    width: 30px;
+    margin-bottom: 10px;
+  }
+  #phoneNav .phoneNavContent {
+    position: absolute;
+    background-color: #EFEFEF;
+    top: 8vh;
+    left: 0%;
+    width: 100%;
+    height: 99vh;
+    transform: scaleY(0);
+    transform-origin: 50% 0;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out 0.3s;
+    opacity: 0;
+  }
+  #phoneNav .phoneNavContent ul {
+    position: relative;
+    height: 80vh;
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-left: 5%;
+  }
+  #phoneNav .phoneNavContent ul li a {
+    color: #000000;
+    text-decoration: none;
+    font-family: "Noto Serif TC", serif;
+    letter-spacing: 40px;
+    font-size: 25px;
+  }
+  #phoneNav .phoneNavContent .Phoneicon {
+    position: absolute;
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    bottom: 5%;
+  }
+  #phoneNav .phoneNavContent .Phoneicon a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 25px;
+    font-family: "GFS Didot", serif;
+  }
+  #phoneNav #hambergurCheckbox:checked ~ .phoneNavContent {
+    transform: scaleY(1);
+    opacity: 1;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out 0.3s;
+  }
+  .videoText {
+    z-index: 2;
+    color: aliceblue;
+    font-family: "GFS Didot", serif;
+    font-size: 40px;
+    letter-spacing: 40px;
+    padding-left: 5vw;
+  }
+  #homepage1Container {
+    position: relative;
+    height: 130vh;
+    width: 100%;
+    background-image: url("../../image/DSC_2951.jpg");
+    background-position: center center;
+    background-size: 240%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  #homepage1Container .textA {
+    z-index: 2;
+    color: aliceblue;
+    color: aliceblue;
+  }
+  #homepage1Container #text1 {
+    position: absolute;
+    margin-top: calc(100vh - 400px);
+    font-size: 60px;
+    height: 100vh;
+    font-family: "Noto Serif TC", serif;
+    writing-mode: vertical-lr;
+    letter-spacing: 250px;
+  }
+  #homepage1Container #text2 {
+    font-size: 12px;
+    position: absolute;
+    left: 80%;
+    top: 43%;
+    margin-bottom: 300px;
+    width: 101px;
+    height: 314px;
+    writing-mode: vertical-rl;
+    letter-spacing: 5px;
+    line-height: 25px;
+    font-family: "Noto Serif TC", serif;
+  }
+  #homepage1Container #text3 {
+    width: 250px;
+    height: 500px;
+    position: absolute;
+    margin-top: 50vh;
+    left: 2%;
+  }
+  #homepage1Container #text3 h3 {
+    font-size: 25px;
+    letter-spacing: 7px;
+    border-bottom: 1px solid white;
+    text-align: center;
+  }
+  #homepage1Container #text3 p {
+    font-size: 10px;
+    line-height: 25px;
+  }
+  #homepage1Container #text4 {
+    width: 300px;
+    height: 500px;
+    position: absolute;
+    right: 25vw;
+    top: 70%;
+    cursor: pointer;
+    z-index: 4;
+  }
+  #homepage1Container #text4 h3 {
+    font-size: 30px;
+    letter-spacing: 5px;
+  }
+  #homepage1Container #text4 h5 {
+    position: relative;
+    margin-top: 30px;
+    letter-spacing: 5px;
+  }
+  #homepage1Container #text4 p {
+    margin-top: 20px;
+    font-size: 5px;
+    letter-spacing: 5px;
+    line-height: 25px;
+  }
+  #homepage1Container #text4 h5::before {
+    display: none;
+  }
+  #homepage1Container #text4 .line1 {
+    display: none;
+  }
+  #homepage1Container #text4 .line1::after {
+    display: none;
+  }
+  #homepage1Container #text4:hover > .line1 {
+    transform: translateX(-2px);
+  }
+  #homepage1Container #text4:hover > .line1::after {
+    transform: translateY(-3px);
+  }
+  #homepageContainer2 {
+    position: relative;
+  }
+  #homepageContainer2 .homeAbout {
+    width: 100%;
+    background-color: #051216;
+  }
+  #homepageContainer2 .homeAbout .row {
+    height: 110vh;
+    width: 100%;
+  }
+  #homepageContainer2 .homeAbout .row #homepageContainer2Title {
+    font-family: "Noto Serif TC", serif;
+    width: 100%;
+    height: 120px;
+    writing-mode: vertical-rl;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 25px;
+    letter-spacing: 35px;
+  }
+  #homepageContainer2 .homeAbout .row #homepageContainer2Content1 {
+    font-family: "Noto Serif TC", serif;
+    width: 100%;
+    height: 40vh;
+    writing-mode: vertical-rl;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    letter-spacing: 5px;
+    line-height: 50px;
+    font-size: 18px;
+    flex-wrap: wrap;
+    position: relative;
+  }
+  #homepageContainer5 {
+    position: relative;
+    width: 100%;
+    right: 1vw;
+    background-color: #ffffff;
+  }
+  #homepageContainer5 #homepageContainer5Content {
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: 100px;
+    padding-left: 27vw;
+  }
+  #homepageContainer5 #homepageContainer5Content h3 {
+    font-family: "Noto Serif TC", serif;
+    text-align: center;
+    width: 90%;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 10px;
+    position: absolute;
+    top: calc(10vh - 0px);
+  }
+  #homepageContainer5 #homepageContainer5Content p {
+    font-family: "Noto Serif TC", serif;
+    text-align: center;
+    width: 75%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 10px;
+    line-height: 30px;
+    position: absolute;
+    top: calc(20vh - 0px);
+  }
+  #homepageContainer5 #homepageContainer5Image {
+    position: relative;
+  }
+  #homepageContainer5 #homepageContainer5Image a img {
+    width: 500px;
+  }
+  #homepageContainer5 #homepageContainer5Image .container5text {
+    height: 300px;
+    width: 400px;
+    position: relative;
+    top: 50px;
+    right: 1vw;
+  }
+  #homepageContainer5 #homepageContainer5Image .container5text h4 {
+    font-family: "Noto Serif TC", serif;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #homepageContainer5 #homepageContainer5Image .container5text a p {
+    font-family: "Noto Serif TC", serif;
+    position: absolute;
+    top: 25%;
+    letter-spacing: 10px;
+    font-size: 15px;
+    line-height: 40px;
+    color: #051216;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #homepageContainer5 #homepageContainer5Image .container5text p::after {
+    position: absolute;
+    content: "";
+    height: 1px;
+    width: 100px;
+    background-color: #051216;
+    bottom: calc(70% - 150px);
+    right: calc(15% - 50px);
+    transform: translateX(0px);
+    transition: transform 0.7s ease-in-out;
+  }
+  #homepageContainer5 #homepageContainer5Image .container5text p::before {
+    position: absolute;
+    content: "";
+    height: 30px;
+    width: 0.5px;
+    background-color: #051216;
+    bottom: calc(65% - 150px);
+    right: calc(12% - 30px);
+    transform: translateY(0px);
+    transition: transform 0.7s ease-in-out;
+  }
+  #homepageContainer5 #homepageContainer5Image .container5text a:hover > p::before {
+    transform: translateY(10px);
+  }
+  #homepageContainer5 #homepageContainer5Image .container5text a:hover > p::after {
+    transform: translateX(20px);
+  }
+  #homepageContainer6 {
+    margin-top: 10%;
+    width: 100%;
+    position: relative;
+    background-color: #EFEFEF;
+    display: flex;
+    align-items: center;
+  }
+  #homepageContainer6 .footerContainer {
+    width: 95%;
+  }
+  #homepageContainer6 .footerContainer #footer1 {
+    content: "";
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #homepageContainer6 .footerContainer #footer1 #footerlogo {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    writing-mode: horizontal-tb;
+    font-family: "GFS Didot", serif;
+    letter-spacing: 20px;
+    top: 8vh;
+    padding-right: 1.5%;
+    font-size: 30px;
+    padding-left: 3.5vw;
+    text-align: center;
+  }
+  #homepageContainer6 .footerContainer #footer1 h4 {
+    position: absolute;
+    bottom: 45%;
+    letter-spacing: 5px;
+    font-family: "GFS Didot", serif;
+    font-size: 25px;
+  }
+  #homepageContainer6 .footerContainer #footer1 #footer1content {
+    position: absolute;
+    font-size: 18px;
+    letter-spacing: 5px;
+    font-family: "Noto Serif TC", serif;
+    line-height: 25px;
+    text-align: center;
+    top: 70%;
+  }
+  #homepageContainer6 .footerContainer #footer2 {
+    content: "";
+    width: 100%;
+    height: 50vh;
+    font-family: "GFS Didot", serif;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #homepageContainer6 .footerContainer #footer2 #follow {
+    text-align: center;
+    height: 50px;
+    margin: 0%;
+    margin-right: calc(1% - 17px);
+    font-size: 20px;
+    letter-spacing: 10px;
+  }
+  #homepageContainer6 .footerContainer #footer2 #footer2Content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 60%;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    background-color: #EFEFEF;
+    margin-left: calc(0% - 5px);
+  }
+  #homepageContainer6 .footerContainer #footer2 #footer2Content #footerFB {
+    font-size: 24px;
+    margin: 0%;
+    letter-spacing: 10px;
+    margin-right: calc(1% - 17px);
+  }
+  #homepageContainer6 .footerContainer #footer2 #footer2Content #footerFB a {
+    text-decoration: none;
+    color: #313131;
+    font-size: 26px;
+  }
+  #homepageContainer6 .footerContainer #footer2 #footer2Content #footerIG {
+    font-size: 24px;
+    margin: 0%;
+    letter-spacing: 10px;
+    margin-right: calc(1% - 17px);
+  }
+  #homepageContainer6 .footerContainer #footer2 #footer2Content #footerIG a {
+    text-decoration: none;
+    color: #313131;
+    font-size: 26px;
+  }
+  #homepageContainer6 .footerContainer #footer2 #footer2Content #footerLine {
+    content: "";
+    background-color: #000000;
+    height: 50%;
+    width: 1.5px;
+    margin: 0%;
+  }
+  #homepageContainer6 .footerContainer #footer3 {
+    content: "";
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #homepageContainer6 .footerContainer #footer3 #footerNav {
+    position: absolute;
+    writing-mode: vertical-lr;
+    width: 100%;
+    height: 100%;
+  }
+  #homepageContainer6 .footerContainer #footer3 #footerNav ul {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0%;
+    margin: 0%;
+    list-style: none;
+  }
+  #homepageContainer6 .footerContainer #footer3 #footerNav ul li a {
+    position: relative;
+    color: #000000;
+    text-decoration: none;
+    font-family: "Noto Serif TC", serif;
+    letter-spacing: 10px;
+  }
+  #homepageContainer6 .footerContainer #footer3 #footerNav ul li a::after {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 0.5px;
+    background-color: #000000;
+    top: calc(0% - 2px);
+    left: calc(0% - 5px);
+    opacity: 0;
+    transition: 1s ease-in-out;
+  }
+  #homepageContainer6 .footerContainer #footer3 #footerNav ul li a:hover::after {
+    opacity: 1;
+  }
+  #homepageContainer6 .footerContainer #footer3 #footerFinal {
+    height: 15vh;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 10vh;
+    left: 0vw;
+    font-family: "GFS Didot", serif;
+    font-size: 24px;
+    letter-spacing: 8px;
+  }
+}
+@media screen and (max-width: 700px) {
+  #phoneNav {
+    position: fixed;
+    z-index: 10;
+    height: 8vh;
+    width: 100%;
+    background-color: #EFEFEF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #phoneNav #phnoeNavLogo {
+    font-family: "GFS Didot", serif;
+    font-size: 25px;
+    letter-spacing: 10px;
+    margin-left: 10%;
+  }
+  #phoneNav #hambergurCheckbox {
+    display: none;
+  }
+  #phoneNav #hambergurCheckbox:checked + label .hambergur span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 5px;
+    transition: top 0.3s ease-in-out, transform 0.3s ease-in-out 0.3s;
+  }
+  #phoneNav #hambergurCheckbox:checked + label .hambergur span:nth-child(2) {
+    transform: rotate(-45deg);
+    top: -5px;
+    transition: top 0.3s ease-in-out, transform 0.3s ease-in-out 0.3s;
+  }
+  #phoneNav .hambergur {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 30px;
+    height: 50px;
+    right: 50px;
+  }
+  #phoneNav .hambergur span {
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out 0.3s;
+    top: 0%;
+    background-color: #000000;
+  }
+  #phoneNav .hambergur span:nth-child(1) {
+    position: relative;
+    content: "";
+    margin-top: 10px;
+    height: 2px;
+    width: 30px;
+  }
+  #phoneNav .hambergur span:nth-child(2) {
+    position: relative;
+    content: "";
+    height: 2px;
+    width: 30px;
+    margin-bottom: 10px;
+  }
+  #phoneNav .phoneNavContent {
+    position: absolute;
+    background-color: #EFEFEF;
+    top: 8vh;
+    left: 0%;
+    width: 100%;
+    height: 99vh;
+    transform: scaleY(0);
+    transform-origin: 50% 0;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out 0.3s;
+    opacity: 0;
+  }
+  #phoneNav .phoneNavContent ul {
+    position: relative;
+    height: 80vh;
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-left: 5%;
+  }
+  #phoneNav .phoneNavContent ul li a {
+    color: #000000;
+    text-decoration: none;
+    font-family: "Noto Serif TC", serif;
+    letter-spacing: 40px;
+    font-size: 25px;
+  }
+  #phoneNav .phoneNavContent .Phoneicon {
+    position: absolute;
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    bottom: 5%;
+  }
+  #phoneNav .phoneNavContent .Phoneicon a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 25px;
+    font-family: "GFS Didot", serif;
+  }
+  #phoneNav #hambergurCheckbox:checked ~ .phoneNavContent {
+    transform: scaleY(1);
+    opacity: 1;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out 0.3s;
+  }
+  .videoText {
+    z-index: 2;
+    color: aliceblue;
+    font-family: "GFS Didot", serif;
+    font-size: 30px;
+    letter-spacing: 40px;
+  }
+  #homepage1Container {
+    position: relative;
+    height: 130vh;
+    width: 100%;
+    background-image: url("../../image/DSC_2951.jpg");
+    background-position: center center;
+    background-size: 240%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  #homepage1Container .textA {
+    z-index: 2;
+    color: aliceblue;
+    color: aliceblue;
+  }
+  #homepage1Container #text1 {
+    position: absolute;
+    margin-top: calc(100vh - 400px);
+    font-size: 60px;
+    height: 100vh;
+    font-family: "Noto Serif TC", serif;
+    writing-mode: vertical-lr;
+    letter-spacing: 250px;
+  }
+  #homepage1Container #text2 {
+    font-size: 12px;
+    position: absolute;
+    left: 80%;
+    top: 43%;
+    margin-bottom: 300px;
+    width: 101px;
+    height: 314px;
+    writing-mode: vertical-rl;
+    letter-spacing: 5px;
+    line-height: 25px;
+    font-family: "Noto Serif TC", serif;
+  }
+  #homepage1Container #text3 {
+    width: 250px;
+    height: 500px;
+    position: absolute;
+    margin-top: 50vh;
+    left: 2%;
+  }
+  #homepage1Container #text3 h3 {
+    font-size: 25px;
+    letter-spacing: 7px;
+    border-bottom: 1px solid white;
+    text-align: center;
+  }
+  #homepage1Container #text3 p {
+    font-size: 10px;
+    line-height: 25px;
+  }
+  #homepage1Container #text4 {
+    width: 300px;
+    height: 500px;
+    position: absolute;
+    right: 20vw;
+    top: 70%;
+    cursor: pointer;
+    z-index: 4;
+  }
+  #homepage1Container #text4 h3 {
+    font-size: 30px;
+    letter-spacing: 5px;
+  }
+  #homepage1Container #text4 h5 {
+    position: relative;
+    margin-top: 30px;
+    letter-spacing: 5px;
+  }
+  #homepage1Container #text4 p {
+    margin-top: 20px;
+    font-size: 5px;
+    letter-spacing: 5px;
+    line-height: 25px;
+  }
+  #homepage1Container #text4 h5::before {
+    display: none;
+  }
+  #homepage1Container #text4 .line1 {
+    display: none;
+  }
+  #homepage1Container #text4 .line1::after {
+    display: none;
+  }
+  #homepage1Container #text4:hover > .line1 {
+    transform: translateX(-2px);
+  }
+  #homepage1Container #text4:hover > .line1::after {
+    transform: translateY(-3px);
+  }
+  #homepageContainer2 {
+    position: relative;
+  }
+  #homepageContainer2 .homeAbout {
+    width: 100%;
+    background-color: #051216;
+  }
+  #homepageContainer2 .homeAbout .row {
+    height: 110vh;
+    width: 100%;
+  }
+  #homepageContainer2 .homeAbout .row #homepageContainer2Title {
+    font-family: "Noto Serif TC", serif;
+    width: 100%;
+    height: 120px;
+    writing-mode: vertical-rl;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 25px;
+    letter-spacing: 35px;
+  }
+  #homepageContainer2 .homeAbout .row #homepageContainer2Content1 {
+    font-family: "Noto Serif TC", serif;
+    width: 100%;
+    height: 40vh;
+    writing-mode: vertical-rl;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    letter-spacing: 5px;
+    line-height: 50px;
+    font-size: 18px;
+    flex-wrap: wrap;
+    position: relative;
+  }
+  #homepageContainer5 {
+    position: relative;
+    width: 100%;
+    background-color: #ffffff;
+  }
+  #homepageContainer5 #homepageContainer5Content {
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-left: 38vw;
+    bottom: 6vh;
+  }
+  #homepageContainer5 #homepageContainer5Content h3 {
+    font-family: "Noto Serif TC", serif;
+    text-align: center;
+    width: 90%;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 10px;
+    position: absolute;
+    top: calc(10vh - 0px);
+  }
+  #homepageContainer5 #homepageContainer5Content p {
+    font-family: "Noto Serif TC", serif;
+    text-align: center;
+    width: 75%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 10px;
+    line-height: 30px;
+    position: absolute;
+    top: calc(20vh - 0px);
+  }
+  #homepageContainer5 #homepageContainer5Image {
+    position: relative;
+  }
+  #homepageContainer5 #homepageContainer5Image a img {
+    width: 500px;
+  }
+  #homepageContainer5 #homepageContainer5Image .container5text {
+    height: 300px;
+    width: 400px;
+    position: relative;
+    top: 50px;
+    right: 3vw;
+  }
+  #homepageContainer5 #homepageContainer5Image .container5text h4 {
+    font-family: "Noto Serif TC", serif;
+  }
+  #homepageContainer5 #homepageContainer5Image .container5text a p {
+    font-family: "Noto Serif TC", serif;
+    position: absolute;
+    top: 25%;
+    letter-spacing: 10px;
+    font-size: 15px;
+    line-height: 40px;
+    color: #051216;
+  }
+  #homepageContainer5 #homepageContainer5Image .container5text p::after {
+    display: none;
+    position: absolute;
+    content: "";
+    height: 1px;
+    width: 100px;
+    background-color: #051216;
+    bottom: calc(70% - 150px);
+    right: calc(15% - 50px);
+    transform: translateX(0px);
+    transition: transform 0.7s ease-in-out;
+  }
+  #homepageContainer5 #homepageContainer5Image .container5text p::before {
+    display: none;
+    position: absolute;
+    content: "";
+    height: 30px;
+    width: 0.5px;
+    background-color: #051216;
+    bottom: calc(65% - 150px);
+    right: calc(12% - 30px);
+    transform: translateY(0px);
+    transition: transform 0.7s ease-in-out;
+  }
+  #homepageContainer5 #homepageContainer5Image .container5text a:hover > p::before {
+    transform: translateY(10px);
+  }
+  #homepageContainer5 #homepageContainer5Image .container5text a:hover > p::after {
+    transform: translateX(20px);
+  }
+  #homepageContainer6 {
+    margin-top: 10%;
+    width: 100%;
+    position: relative;
+    background-color: #EFEFEF;
+    display: flex;
+    align-items: center;
+  }
+  #homepageContainer6 .footerContainer {
+    width: 95%;
+  }
+  #homepageContainer6 .footerContainer #footer1 {
+    content: "";
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #homepageContainer6 .footerContainer #footer1 #footerlogo {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    writing-mode: horizontal-tb;
+    font-family: "GFS Didot", serif;
+    letter-spacing: 20px;
+    top: 8vh;
+    font-size: 30px;
+    padding-left: 4vw;
+    text-align: center;
+  }
+  #homepageContainer6 .footerContainer #footer1 h4 {
+    position: absolute;
+    bottom: 45%;
+    letter-spacing: 5px;
+    font-family: "GFS Didot", serif;
+  }
+  #homepageContainer6 .footerContainer #footer1 #footer1content {
+    position: absolute;
+    bottom: 0%;
+    font-size: 14px;
+    letter-spacing: 5px;
+    font-family: "Noto Serif TC", serif;
+    line-height: 15px;
+    text-align: center;
+  }
+  #homepageContainer6 .footerContainer #footer2 {
+    content: "";
+    width: 100%;
+    height: 50vh;
+    font-family: "GFS Didot", serif;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #homepageContainer6 .footerContainer #footer2 #follow {
+    text-align: center;
+    height: 50px;
+    margin: 0%;
+    margin-right: calc(1% - 17px);
+    font-size: 20px;
+    letter-spacing: 10px;
+  }
+  #homepageContainer6 .footerContainer #footer2 #footer2Content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 60%;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    background-color: #EFEFEF;
+    margin-left: calc(0% - 5px);
+  }
+  #homepageContainer6 .footerContainer #footer2 #footer2Content #footerFB {
+    font-size: 24px;
+    margin: 0%;
+    letter-spacing: 10px;
+    margin-right: calc(1% - 17px);
+  }
+  #homepageContainer6 .footerContainer #footer2 #footer2Content #footerFB a {
+    text-decoration: none;
+    color: #313131;
+    font-size: 26px;
+  }
+  #homepageContainer6 .footerContainer #footer2 #footer2Content #footerIG {
+    font-size: 24px;
+    margin: 0%;
+    letter-spacing: 10px;
+    margin-right: calc(1% - 17px);
+  }
+  #homepageContainer6 .footerContainer #footer2 #footer2Content #footerIG a {
+    text-decoration: none;
+    color: #313131;
+    font-size: 26px;
+  }
+  #homepageContainer6 .footerContainer #footer2 #footer2Content #footerLine {
+    content: "";
+    background-color: #000000;
+    height: 50%;
+    width: 1.5px;
+    margin: 0%;
+  }
+  #homepageContainer6 .footerContainer #footer3 {
+    content: "";
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #homepageContainer6 .footerContainer #footer3 #footerNav {
+    position: absolute;
+    writing-mode: vertical-lr;
+    width: 100%;
+    height: 100%;
+  }
+  #homepageContainer6 .footerContainer #footer3 #footerNav ul {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0%;
+    margin: 0%;
+    list-style: none;
+  }
+  #homepageContainer6 .footerContainer #footer3 #footerNav ul li a {
+    position: relative;
+    color: #000000;
+    text-decoration: none;
+    font-family: "Noto Serif TC", serif;
+    letter-spacing: 10px;
+  }
+  #homepageContainer6 .footerContainer #footer3 #footerNav ul li a::after {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 0.5px;
+    background-color: #000000;
+    top: calc(0% - 2px);
+    left: calc(0% - 5px);
+    opacity: 0;
+    transition: 1s ease-in-out;
+  }
+  #homepageContainer6 .footerContainer #footer3 #footerNav ul li a:hover::after {
+    opacity: 1;
+  }
+  #homepageContainer6 .footerContainer #footer3 #footerFinal {
+    height: 15vh;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 10vh;
+    left: 0vw;
+    font-family: "GFS Didot", serif;
+    font-size: 24px;
+    letter-spacing: 8px;
+  }
+}
+@media screen and (max-width: 576px) {
+  #phoneNav {
+    position: fixed;
+    z-index: 10;
+    height: 8vh;
+    width: 100%;
+    background-color: #EFEFEF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #phoneNav #phnoeNavLogo {
+    font-family: "GFS Didot", serif;
+    font-size: 25px;
+    letter-spacing: 10px;
+    margin-left: 10%;
+  }
+  #phoneNav #hambergurCheckbox {
+    display: none;
+  }
+  #phoneNav #hambergurCheckbox:checked + label .hambergur span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 5px;
+    transition: top 0.3s ease-in-out, transform 0.3s ease-in-out 0.3s;
+  }
+  #phoneNav #hambergurCheckbox:checked + label .hambergur span:nth-child(2) {
+    transform: rotate(-45deg);
+    top: -5px;
+    transition: top 0.3s ease-in-out, transform 0.3s ease-in-out 0.3s;
+  }
+  #phoneNav .hambergur {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 30px;
+    height: 50px;
+    right: 50px;
+  }
+  #phoneNav .hambergur span {
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out 0.3s;
+    top: 0%;
+    background-color: #000000;
+  }
+  #phoneNav .hambergur span:nth-child(1) {
+    position: relative;
+    content: "";
+    margin-top: 10px;
+    height: 2px;
+    width: 30px;
+  }
+  #phoneNav .hambergur span:nth-child(2) {
+    position: relative;
+    content: "";
+    height: 2px;
+    width: 30px;
+    margin-bottom: 10px;
+  }
+  #phoneNav .phoneNavContent {
+    position: absolute;
+    background-color: #EFEFEF;
+    top: 8vh;
+    left: 0%;
+    width: 100%;
+    height: 99vh;
+    transform: scaleY(0);
+    transform-origin: 50% 0;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out 0.3s;
+    opacity: 0;
+  }
+  #phoneNav .phoneNavContent ul {
+    position: relative;
+    height: 80vh;
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-left: 10%;
+  }
+  #phoneNav .phoneNavContent ul li a {
+    color: #000000;
+    text-decoration: none;
+    font-family: "Noto Serif TC", serif;
+    letter-spacing: 40px;
+    font-size: 25px;
+  }
+  #phoneNav .phoneNavContent .Phoneicon {
+    position: absolute;
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    bottom: 5%;
+  }
+  #phoneNav .phoneNavContent .Phoneicon a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 25px;
+    font-family: "GFS Didot", serif;
+  }
+  #phoneNav #hambergurCheckbox:checked ~ .phoneNavContent {
+    transform: scaleY(1);
+    opacity: 1;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out 0.3s;
+  }
+  .videoText {
+    z-index: 2;
+    color: aliceblue;
+    font-family: "GFS Didot", serif;
+    font-size: 20px;
+    letter-spacing: 20px;
+  }
+  #homepage1Container {
+    position: relative;
+    height: 250vh;
+    width: 100%;
+    background-image: url("../../image/DSC_2951.jpg");
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  #homepage1Container .textA {
+    z-index: 2;
+    color: aliceblue;
+    color: aliceblue;
+  }
+  #homepage1Container #text1 {
+    position: absolute;
+    top: 38vh;
+    font-size: 60px;
+    height: 176vh;
+    font-family: "Noto Serif TC", serif;
+    writing-mode: vertical-lr;
+    letter-spacing: 50vh;
+  }
+  #homepage1Container #text2 {
+    font-size: 12px;
+    position: absolute;
+    left: 40%;
+    top: 3%;
+    margin-bottom: 300px;
+    width: 150px;
+    height: 200px;
+    writing-mode: vertical-rl;
+    letter-spacing: 5px;
+    line-height: 25px;
+    font-family: "Noto Serif TC", serif;
+  }
+  #homepage1Container #text3 {
+    width: 250px;
+    height: 500px;
+    position: absolute;
+    top: -5%;
+    left: 22%;
+  }
+  #homepage1Container #text3 h3 {
+    font-size: 25px;
+    letter-spacing: 7px;
+    border-bottom: 1px solid white;
+    text-align: center;
+  }
+  #homepage1Container #text3 p {
+    font-size: 10px;
+    line-height: 25px;
+    text-align: center;
+  }
+  #homepage1Container #text4 {
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    right: 0%;
+    top: 70%;
+    cursor: pointer;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #homepage1Container #text4 h3 {
+    font-size: 20px;
+    letter-spacing: 5px;
+  }
+  #homepage1Container #text4 h5 {
+    font-size: 18px;
+    position: relative;
+    margin-top: 30px;
+    letter-spacing: 5px;
+  }
+  #homepage1Container #text4 p {
+    width: 90%;
+    margin-top: 20px;
+    font-size: 5px;
+    letter-spacing: 5px;
+    line-height: 25px;
+    text-align: center;
+  }
+  #homepage1Container #text4 h5::before {
+    display: none;
+  }
+  #homepage1Container #text4 .line1 {
+    display: none;
+  }
+  #homepage1Container #text4 .line1::after {
+    display: none;
+  }
+  #homepage1Container #text4:hover > .line1 {
+    transform: translateX(-2px);
+  }
+  #homepage1Container #text4:hover > .line1::after {
+    transform: translateY(-3px);
+  }
+  #homepageContainer2 {
+    position: relative;
+  }
+  #homepageContainer2 .homeAbout {
+    width: 100%;
+    background-color: #051216;
+  }
+  #homepageContainer2 .homeAbout .row {
+    height: 150vh;
+    width: 100%;
+    margin: 0;
+  }
+  #homepageContainer2 .homeAbout .row #homepageContainer2Title {
+    font-family: "Noto Serif TC", serif;
+    width: 100%;
+    height: 120px;
+    writing-mode: vertical-rl;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 25px;
+    letter-spacing: 35px;
+    position: relative;
+    top: -10%;
+  }
+  #homepageContainer2 .homeAbout .row #homepageContainer2Content1 {
+    font-family: "Noto Serif TC", serif;
+    width: 100%;
+    height: 75vh;
+    writing-mode: sideways-rl;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    letter-spacing: 6px;
+    line-height: 40px;
+    font-size: 18px;
+    flex-wrap: wrap;
+    position: relative;
+    font-size: 18px;
+  }
+  #homepageContainer5 {
+    position: relative;
+    width: 100%;
+    background-color: #ffffff;
+  }
+  #homepageContainer5 #homepageContainer5Content {
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-left: 52vw;
+    bottom: 20vh;
+  }
+  #homepageContainer5 #homepageContainer5Content h3 {
+    font-family: "Noto Serif TC", serif;
+    text-align: center;
+    width: 80%;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 10px;
+    position: absolute;
+    top: calc(10vh - 0px);
+  }
+  #homepageContainer5 #homepageContainer5Content p {
+    font-family: "Noto Serif TC", serif;
+    text-align: center;
+    width: 75%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 10px;
+    line-height: 30px;
+    position: absolute;
+    top: calc(20vh - 0px);
+  }
+  #homepageContainer5 #homepageContainer5Image {
+    position: relative;
+  }
+  #homepageContainer5 #homepageContainer5Image a img {
+    width: 500px;
+  }
+  #homepageContainer5 #homepageContainer5Image .container5text {
+    height: 300px;
+    width: 70%;
+    position: relative;
+    top: 50px;
+    right: 2vw;
+  }
+  #homepageContainer5 #homepageContainer5Image .container5text h4 {
+    font-family: "Noto Serif TC", serif;
+  }
+  #homepageContainer5 #homepageContainer5Image .container5text a p {
+    font-family: "Noto Serif TC", serif;
+    position: absolute;
+    top: 25%;
+    letter-spacing: 10px;
+    font-size: 15px;
+    line-height: 40px;
+    left: 5vw;
+    color: #051216;
+  }
+  #homepageContainer5 #homepageContainer5Image .container5text p::after {
+    display: none;
+    position: absolute;
+    content: "";
+    height: 1px;
+    width: 100px;
+    background-color: #051216;
+    bottom: calc(70% - 150px);
+    right: calc(15% - 50px);
+    transform: translateX(0px);
+    transition: transform 0.7s ease-in-out;
+  }
+  #homepageContainer5 #homepageContainer5Image .container5text p::before {
+    display: none;
+    position: absolute;
+    content: "";
+    height: 30px;
+    width: 0.5px;
+    background-color: #051216;
+    bottom: calc(65% - 150px);
+    right: calc(12% - 30px);
+    transform: translateY(0px);
+    transition: transform 0.7s ease-in-out;
+  }
+  #homepageContainer5 #homepageContainer5Image .container5text a:hover > p::before {
+    transform: translateY(10px);
+  }
+  #homepageContainer5 #homepageContainer5Image .container5text a:hover > p::after {
+    transform: translateX(20px);
+  }
+  #homepageContainer6 {
+    margin-top: 10%;
+    width: 100%;
+    position: relative;
+    background-color: #EFEFEF;
+    display: flex;
+    align-items: center;
+  }
+  #homepageContainer6 .footerContainer {
+    width: 95%;
+  }
+  #homepageContainer6 .footerContainer #footer1 {
+    content: "";
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #homepageContainer6 .footerContainer #footer1 #footerlogo {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    writing-mode: horizontal-tb;
+    font-family: "GFS Didot", serif;
+    letter-spacing: 20px;
+    top: 8vh;
+    padding-left: 5vw;
+    font-size: 30px;
+    text-align: center;
+  }
+  #homepageContainer6 .footerContainer #footer1 h4 {
+    position: absolute;
+    bottom: 45%;
+    letter-spacing: 5px;
+    font-family: "GFS Didot", serif;
+  }
+  #homepageContainer6 .footerContainer #footer1 #footer1content {
+    position: absolute;
+    bottom: 0%;
+    font-size: 14px;
+    letter-spacing: 5px;
+    font-family: "Noto Serif TC", serif;
+    line-height: 15px;
+    text-align: center;
+  }
+  #homepageContainer6 .footerContainer #footer2 {
+    content: "";
+    width: 100%;
+    height: 50vh;
+    font-family: "GFS Didot", serif;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #homepageContainer6 .footerContainer #footer2 #follow {
+    text-align: center;
+    height: 50px;
+    margin: 0%;
+    margin-right: calc(1% - 17px);
+    font-size: 20px;
+    letter-spacing: 10px;
+  }
+  #homepageContainer6 .footerContainer #footer2 #footer2Content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 60%;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    background-color: #EFEFEF;
+    margin-left: calc(0% - 5px);
+  }
+  #homepageContainer6 .footerContainer #footer2 #footer2Content #footerFB {
+    font-size: 24px;
+    margin: 0%;
+    letter-spacing: 10px;
+    margin-right: calc(1% - 17px);
+  }
+  #homepageContainer6 .footerContainer #footer2 #footer2Content #footerFB a {
+    text-decoration: none;
+    color: #313131;
+    font-size: 26px;
+  }
+  #homepageContainer6 .footerContainer #footer2 #footer2Content #footerIG {
+    font-size: 24px;
+    margin: 0%;
+    letter-spacing: 10px;
+    margin-right: calc(1% - 17px);
+  }
+  #homepageContainer6 .footerContainer #footer2 #footer2Content #footerIG a {
+    text-decoration: none;
+    color: #313131;
+    font-size: 26px;
+  }
+  #homepageContainer6 .footerContainer #footer2 #footer2Content #footerLine {
+    content: "";
+    background-color: #000000;
+    height: 50%;
+    width: 1.5px;
+    margin: 0%;
+  }
+  #homepageContainer6 .footerContainer #footer3 {
+    content: "";
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #homepageContainer6 .footerContainer #footer3 #footerNav {
+    position: absolute;
+    writing-mode: vertical-lr;
+    width: 100%;
+    height: 100%;
+  }
+  #homepageContainer6 .footerContainer #footer3 #footerNav ul {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0%;
+    margin: 0%;
+    list-style: none;
+  }
+  #homepageContainer6 .footerContainer #footer3 #footerNav ul li a {
+    position: relative;
+    color: #000000;
+    text-decoration: none;
+    font-family: "Noto Serif TC", serif;
+    letter-spacing: 10px;
+  }
+  #homepageContainer6 .footerContainer #footer3 #footerNav ul li a::after {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 0.5px;
+    background-color: #000000;
+    top: calc(0% - 2px);
+    left: calc(0% - 5px);
+    opacity: 0;
+    transition: 1s ease-in-out;
+  }
+  #homepageContainer6 .footerContainer #footer3 #footerNav ul li a:hover::after {
+    opacity: 1;
+  }
+  #homepageContainer6 .footerContainer #footer3 #footerFinal {
+    height: 15vh;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 10vh;
+    left: 1vw;
+    font-family: "GFS Didot", serif;
+    font-size: 24px;
+    letter-spacing: 8px;
+  }
+}
+@media screen and (max-width: 376px) {
+  #phoneNav {
+    position: fixed;
+    z-index: 10;
+    height: 8vh;
+    width: 100%;
+    background-color: #EFEFEF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #phoneNav #phnoeNavLogo {
+    font-family: "GFS Didot", serif;
+    font-size: 25px;
+    letter-spacing: 10px;
+    margin-left: 10%;
+  }
+  #phoneNav #hambergurCheckbox {
+    display: none;
+  }
+  #phoneNav #hambergurCheckbox:checked + label .hambergur span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 5px;
+    transition: top 0.3s ease-in-out, transform 0.3s ease-in-out 0.3s;
+  }
+  #phoneNav #hambergurCheckbox:checked + label .hambergur span:nth-child(2) {
+    transform: rotate(-45deg);
+    top: -5px;
+    transition: top 0.3s ease-in-out, transform 0.3s ease-in-out 0.3s;
+  }
+  #phoneNav .hambergur {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 30px;
+    height: 50px;
+    right: 50px;
+  }
+  #phoneNav .hambergur span {
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out 0.3s;
+    top: 0%;
+    background-color: #000000;
+  }
+  #phoneNav .hambergur span:nth-child(1) {
+    position: relative;
+    content: "";
+    margin-top: 10px;
+    height: 2px;
+    width: 30px;
+  }
+  #phoneNav .hambergur span:nth-child(2) {
+    position: relative;
+    content: "";
+    height: 2px;
+    width: 30px;
+    margin-bottom: 10px;
+  }
+  #phoneNav .phoneNavContent {
+    position: absolute;
+    background-color: #EFEFEF;
+    top: 8vh;
+    left: 0%;
+    width: 100%;
+    height: 99vh;
+    transform: scaleY(0);
+    transform-origin: 50% 0;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out 0.3s;
+    opacity: 0;
+  }
+  #phoneNav .phoneNavContent ul {
+    position: relative;
+    height: 80vh;
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-left: 10%;
+  }
+  #phoneNav .phoneNavContent ul li a {
+    color: #000000;
+    text-decoration: none;
+    font-family: "Noto Serif TC", serif;
+    letter-spacing: 40px;
+    font-size: 25px;
+  }
+  #phoneNav .phoneNavContent .Phoneicon {
+    position: absolute;
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    bottom: 5%;
+  }
+  #phoneNav .phoneNavContent .Phoneicon a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 25px;
+    font-family: "GFS Didot", serif;
+  }
+  #phoneNav #hambergurCheckbox:checked ~ .phoneNavContent {
+    transform: scaleY(1);
+    opacity: 1;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out 0.3s;
+  }
+  .videoText {
+    z-index: 2;
+    color: aliceblue;
+    font-family: "GFS Didot", serif;
+    font-size: 20px;
+    letter-spacing: 20px;
+  }
+  #homepage1Container {
+    position: relative;
+    height: 250vh;
+    width: 100%;
+    background-image: url("../../image/DSC_2951.jpg");
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  #homepage1Container .textA {
+    z-index: 2;
+    color: aliceblue;
+    color: aliceblue;
+  }
+  #homepage1Container #text1 {
+    position: absolute;
+    top: 50vh;
+    font-size: 60px;
+    height: 150vh;
+    font-family: "Noto Serif TC", serif;
+    writing-mode: vertical-lr;
+    letter-spacing: 90vw;
+  }
+  #homepage1Container #text2 {
+    font-size: 12px;
+    position: absolute;
+    left: 40%;
+    top: 3%;
+    margin-bottom: 300px;
+    width: 150px;
+    height: 200px;
+    writing-mode: vertical-rl;
+    letter-spacing: 5px;
+    line-height: 25px;
+    font-family: "Noto Serif TC", serif;
+  }
+  #homepage1Container #text3 {
+    width: 250px;
+    height: 500px;
+    position: absolute;
+    top: -3%;
+    left: 20%;
+  }
+  #homepage1Container #text3 h3 {
+    font-size: 25px;
+    letter-spacing: 7px;
+    border-bottom: 1px solid white;
+    text-align: center;
+  }
+  #homepage1Container #text3 p {
+    font-size: 10px;
+    line-height: 25px;
+  }
+  #homepage1Container #text4 {
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    right: 0%;
+    top: 70%;
+    cursor: pointer;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #homepage1Container #text4 h3 {
+    font-size: 20px;
+    letter-spacing: 5px;
+  }
+  #homepage1Container #text4 h5 {
+    font-size: 18px;
+    position: relative;
+    margin-top: 30px;
+    letter-spacing: 5px;
+  }
+  #homepage1Container #text4 p {
+    width: 90%;
+    margin-top: 20px;
+    font-size: 5px;
+    letter-spacing: 5px;
+    line-height: 25px;
+    text-align: center;
+  }
+  #homepage1Container #text4 h5::before {
+    display: none;
+  }
+  #homepage1Container #text4 .line1 {
+    display: none;
+  }
+  #homepage1Container #text4 .line1::after {
+    display: none;
+  }
+  #homepage1Container #text4:hover > .line1 {
+    transform: translateX(-2px);
+  }
+  #homepage1Container #text4:hover > .line1::after {
+    transform: translateY(-3px);
+  }
+  #homepageContainer2 {
+    position: relative;
+  }
+  #homepageContainer2 .homeAbout {
+    width: 100%;
+    background-color: #051216;
+  }
+  #homepageContainer2 .homeAbout .row {
+    height: 150vh;
+    width: 100%;
+    margin: 0;
+  }
+  #homepageContainer2 .homeAbout .row #homepageContainer2Title {
+    font-family: "Noto Serif TC", serif;
+    width: 100%;
+    height: 120px;
+    writing-mode: vertical-rl;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 25px;
+    letter-spacing: 35px;
+    position: relative;
+    top: -10%;
+  }
+  #homepageContainer2 .homeAbout .row #homepageContainer2Content1 {
+    font-family: "Noto Serif TC", serif;
+    width: 100%;
+    height: 80vh;
+    writing-mode: sideways-rl;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    letter-spacing: 5px;
+    line-height: 40px;
+    font-size: 18px;
+    flex-wrap: wrap;
+    position: relative;
+    font-size: 16px;
+  }
+  #homepageContainer5 {
+    position: relative;
+    width: 100%;
+    background-color: #ffffff;
+  }
+  #homepageContainer5 #homepageContainer5Content {
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-left: 60vw;
+    bottom: 20vh;
+  }
+  #homepageContainer5 #homepageContainer5Content h3 {
+    font-family: "Noto Serif TC", serif;
+    text-align: center;
+    width: 90%;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    letter-spacing: 10px;
+    position: absolute;
+    top: calc(10vh - 0px);
+  }
+  #homepageContainer5 #homepageContainer5Content p {
+    font-family: "Noto Serif TC", serif;
+    text-align: center;
+    width: 75%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 10px;
+    line-height: 30px;
+    position: absolute;
+    top: calc(20vh - 0px);
+    font-size: 14px;
+  }
+  #homepageContainer5 #homepageContainer5Image {
+    position: relative;
+  }
+  #homepageContainer5 #homepageContainer5Image a img {
+    width: 500px;
+  }
+  #homepageContainer5 #homepageContainer5Image .container5text {
+    height: 300px;
+    width: 70%;
+    position: relative;
+    top: 50px;
+    right: -1vw;
+    padding: 0;
+  }
+  #homepageContainer5 #homepageContainer5Image .container5text h4 {
+    font-family: "Noto Serif TC", serif;
+  }
+  #homepageContainer5 #homepageContainer5Image .container5text a p {
+    font-family: "Noto Serif TC", serif;
+    position: absolute;
+    top: 25%;
+    letter-spacing: 10px;
+    font-size: 15px;
+    line-height: 40px;
+    color: #051216;
+    left: 2vw;
+  }
+  #homepageContainer5 #homepageContainer5Image .container5text p::after {
+    display: none;
+    position: absolute;
+    content: "";
+    height: 1px;
+    width: 100px;
+    background-color: #051216;
+    bottom: calc(70% - 150px);
+    right: calc(15% - 50px);
+    transform: translateX(0px);
+    transition: transform 0.7s ease-in-out;
+  }
+  #homepageContainer5 #homepageContainer5Image .container5text p::before {
+    display: none;
+    position: absolute;
+    content: "";
+    height: 30px;
+    width: 0.5px;
+    background-color: #051216;
+    bottom: calc(65% - 150px);
+    right: calc(12% - 30px);
+    transform: translateY(0px);
+    transition: transform 0.7s ease-in-out;
+  }
+  #homepageContainer5 #homepageContainer5Image .container5text a:hover > p::before {
+    transform: translateY(10px);
+  }
+  #homepageContainer5 #homepageContainer5Image .container5text a:hover > p::after {
+    transform: translateX(20px);
+  }
+  #homepageContainer6 {
+    margin-top: 10%;
+    width: 100%;
+    position: relative;
+    background-color: #EFEFEF;
+    display: flex;
+    align-items: center;
+  }
+  #homepageContainer6 .footerContainer {
+    width: 95%;
+  }
+  #homepageContainer6 .footerContainer #footer1 {
+    content: "";
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #homepageContainer6 .footerContainer #footer1 #footerlogo {
+    width: 100%;
+    height: 10vh;
+    position: absolute;
+    writing-mode: horizontal-tb;
+    font-family: "GFS Didot", serif;
+    letter-spacing: 20px;
+    top: 10vh;
+    font-size: 25px;
+    padding-left: 6%;
+    text-align: center;
+  }
+  #homepageContainer6 .footerContainer #footer1 h4 {
+    position: absolute;
+    bottom: 45%;
+    letter-spacing: 5px;
+    font-family: "GFS Didot", serif;
+  }
+  #homepageContainer6 .footerContainer #footer1 #footer1content {
+    position: absolute;
+    bottom: 0%;
+    font-size: 14px;
+    letter-spacing: 5px;
+    font-family: "Noto Serif TC", serif;
+    line-height: 15px;
+    text-align: center;
+  }
+  #homepageContainer6 .footerContainer #footer2 {
+    content: "";
+    width: 100%;
+    height: 50vh;
+    font-family: "GFS Didot", serif;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #homepageContainer6 .footerContainer #footer2 #follow {
+    text-align: center;
+    height: 50px;
+    margin: 0%;
+    margin-right: calc(1% - 17px);
+    font-size: 20px;
+    letter-spacing: 10px;
+  }
+  #homepageContainer6 .footerContainer #footer2 #footer2Content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 60%;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    background-color: #EFEFEF;
+    margin-left: calc(0% - 5px);
+  }
+  #homepageContainer6 .footerContainer #footer2 #footer2Content #footerFB {
+    font-size: 24px;
+    margin: 0%;
+    letter-spacing: 10px;
+    margin-right: calc(1% - 17px);
+  }
+  #homepageContainer6 .footerContainer #footer2 #footer2Content #footerFB a {
+    text-decoration: none;
+    color: #313131;
+    font-size: 26px;
+  }
+  #homepageContainer6 .footerContainer #footer2 #footer2Content #footerIG {
+    font-size: 24px;
+    margin: 0%;
+    letter-spacing: 10px;
+    margin-right: calc(1% - 17px);
+  }
+  #homepageContainer6 .footerContainer #footer2 #footer2Content #footerIG a {
+    text-decoration: none;
+    color: #313131;
+    font-size: 26px;
+  }
+  #homepageContainer6 .footerContainer #footer2 #footer2Content #footerLine {
+    content: "";
+    background-color: #000000;
+    height: 50%;
+    width: 1.5px;
+    margin: 0%;
+  }
+  #homepageContainer6 .footerContainer #footer3 {
+    content: "";
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #homepageContainer6 .footerContainer #footer3 #footerNav {
+    position: absolute;
+    writing-mode: vertical-lr;
+    width: 100%;
+    height: 100%;
+  }
+  #homepageContainer6 .footerContainer #footer3 #footerNav ul {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0%;
+    margin: 0%;
+    list-style: none;
+  }
+  #homepageContainer6 .footerContainer #footer3 #footerNav ul li a {
+    position: relative;
+    color: #000000;
+    text-decoration: none;
+    font-family: "Noto Serif TC", serif;
+    letter-spacing: 10px;
+  }
+  #homepageContainer6 .footerContainer #footer3 #footerNav ul li a::after {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 0.5px;
+    background-color: #000000;
+    top: calc(0% - 2px);
+    left: calc(0% - 5px);
+    opacity: 0;
+    transition: 1s ease-in-out;
+  }
+  #homepageContainer6 .footerContainer #footer3 #footerNav ul li a:hover::after {
+    opacity: 1;
+  }
+  #homepageContainer6 .footerContainer #footer3 #footerFinal {
+    height: 15vh;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 15vh;
+    left: 3vw;
+    font-family: "GFS Didot", serif;
+    font-size: 24px;
+    letter-spacing: 8px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #phoneNav {
+    position: fixed;
+    z-index: 10;
+    height: 8vh;
+    width: 100%;
+    background-color: #EFEFEF;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #phoneNav #phnoeNavLogo {
+    font-family: "GFS Didot", serif;
+    font-size: 25px;
+    letter-spacing: 10px;
+    margin-left: 5%;
+  }
+  #phoneNav #hambergurCheckbox {
+    display: none;
+  }
+  #phoneNav #hambergurCheckbox:checked + label .hambergur span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 5px;
+    transition: top 0.3s ease-in-out, transform 0.3s ease-in-out 0.3s;
+  }
+  #phoneNav #hambergurCheckbox:checked + label .hambergur span:nth-child(2) {
+    transform: rotate(-45deg);
+    top: -4px;
+    transition: top 0.3s ease-in-out, transform 0.3s ease-in-out 0.3s;
+  }
+  #phoneNav .hambergur {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 8vh;
+    height: 8vh;
+    right: calc(15vh - 100px);
+  }
+  #phoneNav .hambergur span {
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out 0.3s;
+    top: 0px;
+  }
+  #phoneNav .hambergur span:nth-child(1) {
+    position: relative;
+    content: "";
+    margin-top: 17px;
+    height: 1.5px;
+    width: 30px;
+    background-color: #000000;
+  }
+  #phoneNav .hambergur span:nth-child(2) {
+    position: relative;
+    content: "";
+    height: 1.5px;
+    width: 30px;
+    background-color: #000000;
+    margin-bottom: 18px;
+  }
+  #phoneNav .phoneNavContent {
+    position: absolute;
+    background-color: #EFEFEF;
+    top: 8vh;
+    left: 0%;
+    width: 100%;
+    height: 98vh;
+    transform: scaleY(0);
+    transform-origin: 50% 0;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out 0.3s;
+    opacity: 0;
+  }
+  #phoneNav .phoneNavContent ul {
+    position: relative;
+    height: 98vh;
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  #phoneNav .phoneNavContent ul li a {
+    color: #000000;
+    text-decoration: none;
+    font-family: "Noto Serif TC", serif;
+    letter-spacing: 40px;
+    font-size: 25px;
+  }
+  #phoneNav #hambergurCheckbox:checked ~ .phoneNavContent {
+    transform: scaleY(1);
+    opacity: 1;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out 0.3s;
+  }
+  .videoText {
+    z-index: 2;
+    color: rgb(255, 255, 255);
+    font-family: "GFS Didot", serif;
+    font-size: 30px;
+    letter-spacing: 40px;
+  }
+  #homepage1Container {
+    position: relative;
+    height: 110vh;
+    width: 100%;
+    background-image: url("../../image/DSC_2951.jpg");
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  #homepage1Container .textA {
+    z-index: 2;
+    color: aliceblue;
+    color: aliceblue;
+  }
+  #homepage1Container #text1 {
+    position: absolute;
+    margin-top: 175px;
+    font-size: 60px;
+    font-family: "Noto Serif TC", serif;
+    writing-mode: vertical-lr;
+    letter-spacing: 200px;
+  }
+  #homepage1Container #text2 {
+    font-size: 12px;
+    position: absolute;
+    left: calc(100vw - 325px);
+    margin-bottom: 300px;
+    width: 101px;
+    height: 314px;
+    writing-mode: vertical-rl;
+    letter-spacing: 5px;
+    line-height: 25px;
+    font-family: "Noto Serif TC", serif;
+  }
+  #homepage1Container #text3 {
+    width: 250px;
+    height: 500px;
+    position: absolute;
+    margin-top: 1000px;
+    left: calc(100vw - 480px);
+  }
+  #homepage1Container #text3 h3 {
+    font-size: 30px;
+    letter-spacing: 7px;
+    border-bottom: 1px solid white;
+    text-align: center;
+  }
+  #homepage1Container #text3 p {
+    font-size: 10px;
+  }
+  #homepage1Container #text4 {
+    width: 300px;
+    height: 500px;
+    position: absolute;
+    right: calc(100vw - 380px);
+    top: calc(100vh - 500px);
+    cursor: pointer;
+  }
+  #homepage1Container #text4 h3 {
+    font-size: 30px;
+    letter-spacing: 5px;
+  }
+  #homepage1Container #text4 h5 {
+    position: relative;
+    margin-top: 30px;
+    letter-spacing: 5px;
+  }
+  #homepage1Container #text4 p {
+    margin-top: 20px;
+    font-size: 5px;
+    letter-spacing: 5px;
+    line-height: 25px;
+  }
+  #homepage1Container #text4 h5::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: -23%;
+    width: 50px;
+    height: 1px;
+    background-color: aliceblue;
+    z-index: 3;
+  }
+  #homepage1Container #text4 .line1 {
+    position: relative;
+    content: "";
+    width: 90px;
+    height: 1px;
+    background-color: aliceblue;
+    bottom: 24.6%;
+    left: 100%;
+    transform: translateX(-15px);
+    transition: transform 1s ease-in-out;
+  }
+  #homepage1Container #text4 .line1::after {
+    position: absolute;
+    content: "";
+    width: 5px;
+    height: 20px;
+    background-color: aliceblue;
+    border: none;
+    right: 5%;
+    transform: translateY(-15px);
+    transition: transform 1s ease-in-out;
+  }
+  #homepage1Container #text4:hover > .line1 {
+    transform: translateX(-2px);
+  }
+  #homepage1Container #text4:hover > .line1::after {
+    transform: translateY(-3px);
+  }
+  #homepageContainer2 {
+    position: relative;
+  }
+  #homepageContainer2 .homeAbout {
+    width: 100%;
+    background-color: #051216;
+  }
+  #homepageContainer2 .homeAbout .row {
+    height: 110vh;
+    width: 100%;
+  }
+  #homepageContainer2 .homeAbout .row #homepageContainer2Title {
+    font-family: "Noto Serif TC", serif;
+    width: 100%;
+    height: 120px;
+    writing-mode: vertical-rl;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 25px;
+    letter-spacing: 35px;
+  }
+  #homepageContainer2 .homeAbout .row #homepageContainer2Content1 {
+    font-family: "Noto Serif TC", serif;
+    width: 100%;
+    height: 40vh;
+    writing-mode: vertical-rl;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    letter-spacing: 5px;
+    line-height: 50px;
+    font-size: 18px;
+    flex-wrap: wrap;
+    position: relative;
+  }
+  #homepageContainer5 {
+    position: relative;
+    width: 100%;
+    background-color: #ffffff;
+  }
+  #homepageContainer5 #homepageContainer5Content {
+    width: 90%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  #homepageContainer5 #homepageContainer5Content h3 {
+    font-family: "Noto Serif TC", serif;
+    text-align: center;
+    width: 90%;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 10px;
+    position: absolute;
+    top: calc(10vh - 0px);
+  }
+  #homepageContainer5 #homepageContainer5Content p {
+    font-family: "Noto Serif TC", serif;
+    text-align: center;
+    width: 75%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 10px;
+    line-height: 30px;
+    position: absolute;
+    top: calc(20vh - 0px);
+  }
+  #homepageContainer5 #homepageContainer5Image {
+    position: relative;
+  }
+  #homepageContainer5 #homepageContainer5Image a img {
+    width: 500px;
+  }
+  #homepageContainer5 #homepageContainer5Image .container5text {
+    height: 300px;
+    width: 400px;
+    position: relative;
+    top: 50px;
+    right: calc(11% - 100px);
+  }
+  #homepageContainer5 #homepageContainer5Image .container5text h4 {
+    font-family: "Noto Serif TC", serif;
+  }
+  #homepageContainer5 #homepageContainer5Image .container5text a p {
+    font-family: "Noto Serif TC", serif;
+    position: absolute;
+    top: 25%;
+    letter-spacing: 10px;
+    font-size: 15px;
+    line-height: 40px;
+    color: #051216;
+  }
+  #homepageContainer5 #homepageContainer5Image .container5text p::after {
+    position: absolute;
+    content: "";
+    height: 1px;
+    width: 100px;
+    background-color: #051216;
+    bottom: calc(70% - 150px);
+    right: calc(15% - 50px);
+    transform: translateX(0px);
+    transition: transform 0.7s ease-in-out;
+  }
+  #homepageContainer5 #homepageContainer5Image .container5text p::before {
+    position: absolute;
+    content: "";
+    height: 30px;
+    width: 0.5px;
+    background-color: #051216;
+    bottom: calc(65% - 150px);
+    right: calc(12% - 30px);
+    transform: translateY(0px);
+    transition: transform 0.7s ease-in-out;
+  }
+  #homepageContainer5 #homepageContainer5Image .container5text a:hover > p::before {
+    transform: translateY(10px);
+  }
+  #homepageContainer5 #homepageContainer5Image .container5text a:hover > p::after {
+    transform: translateX(20px);
+  }
+  #homepageContainer6 {
+    margin-top: 10%;
+    width: 100%;
+    position: relative;
+    background-color: #EFEFEF;
+    display: flex;
+    align-items: center;
+  }
+  #homepageContainer6 .footerContainer {
+    width: 95%;
+  }
+  #homepageContainer6 .footerContainer #footer1 {
+    content: "";
+    width: 100%;
+    height: 50vh;
+    position: relative;
+  }
+  #homepageContainer6 .footerContainer #footer1 #footerlogo {
+    position: absolute;
+    writing-mode: vertical-lr;
+    font-family: "GFS Didot", serif;
+    letter-spacing: 20px;
+    top: 10%;
+    font-size: 18px;
+    left: 2%;
+  }
+  #homepageContainer6 .footerContainer #footer1 h4 {
+    position: absolute;
+    bottom: 45%;
+    letter-spacing: 5px;
+    font-family: "GFS Didot", serif;
+  }
+  #homepageContainer6 .footerContainer #footer1 #footer1content {
+    position: absolute;
+    bottom: 0%;
+    font-size: 14px;
+    letter-spacing: 5px;
+    font-family: "Noto Serif TC", serif;
+    line-height: 15px;
+  }
+  #homepageContainer6 .footerContainer #footer2 {
+    content: "";
+    width: 100%;
+    height: 50vh;
+    font-family: "GFS Didot", serif;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #homepageContainer6 .footerContainer #footer2 #follow {
+    text-align: center;
+    height: 50px;
+    margin: 0%;
+    margin-right: calc(1% - 17px);
+    font-size: 20px;
+    letter-spacing: 10px;
+  }
+  #homepageContainer6 .footerContainer #footer2 #footer2Content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 60%;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    background-color: #EFEFEF;
+    margin-left: calc(0% - 5px);
+  }
+  #homepageContainer6 .footerContainer #footer2 #footer2Content #footerFB {
+    font-size: 24px;
+    margin: 0%;
+    letter-spacing: 10px;
+    margin-right: calc(1% - 17px);
+  }
+  #homepageContainer6 .footerContainer #footer2 #footer2Content #footerFB a {
+    text-decoration: none;
+    color: #313131;
+    font-size: 26px;
+  }
+  #homepageContainer6 .footerContainer #footer2 #footer2Content #footerIG {
+    font-size: 24px;
+    margin: 0%;
+    letter-spacing: 10px;
+    margin-right: calc(1% - 17px);
+  }
+  #homepageContainer6 .footerContainer #footer2 #footer2Content #footerIG a {
+    text-decoration: none;
+    color: #313131;
+    font-size: 26px;
+  }
+  #homepageContainer6 .footerContainer #footer2 #footer2Content #footerLine {
+    content: "";
+    background-color: #000000;
+    height: 50%;
+    width: 1.5px;
+    margin: 0%;
+  }
+  #homepageContainer6 .footerContainer #footer3 {
+    content: "";
+    width: 100%;
+    height: 50vh;
+    position: relative;
+  }
+  #homepageContainer6 .footerContainer #footer3 #footerNav {
+    position: absolute;
+    writing-mode: vertical-lr;
+    width: 100%;
+    height: 100%;
+  }
+  #homepageContainer6 .footerContainer #footer3 #footerNav ul {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0%;
+    margin: 0%;
+    list-style: none;
+  }
+  #homepageContainer6 .footerContainer #footer3 #footerNav ul li a {
+    position: relative;
+    color: #000000;
+    text-decoration: none;
+    font-family: "Noto Serif TC", serif;
+    letter-spacing: 10px;
+  }
+  #homepageContainer6 .footerContainer #footer3 #footerNav ul li a::after {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 0.5px;
+    background-color: #000000;
+    top: calc(0% - 2px);
+    left: calc(0% - 5px);
+    opacity: 0;
+    transition: 1s ease-in-out;
+  }
+  #homepageContainer6 .footerContainer #footer3 #footerNav ul li a:hover::after {
+    opacity: 1;
+  }
+  #homepageContainer6 .footerContainer #footer3 #footerFinal {
+    position: absolute;
+    bottom: 2%;
+    right: 0%;
+    font-family: "GFS Didot", serif;
+    font-size: 24px;
+    letter-spacing: 8px;
+  }
+}/*# sourceMappingURL=index1.css.map */
