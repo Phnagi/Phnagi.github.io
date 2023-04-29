@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nagi</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/works/works.css?1.0">
+        <link rel="stylesheet" href="css/contact/contact.css?1.0">
+      </head>
+    </head>
+    <body>
+<body>
+    
+    <nav class="navBar ">
+        <div id="logo">NAGI</div>
+        <ul class="navUl" id="navContent">
+            <li id="navContent1"><a href="./index.html">首頁</a></li>
+            <li><a href="./about.html">關於</a></li>
+            <li><a href="./works.html">作品</a></li>
+            
+        </ul>
+        <ul class="navUl" id="navLink">
+            <li><a href="https://www.instagram.com/ph_nagi/">IG</a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=100015813270075">FB</a></li>
+            <li><a href="https://www.flickr.com/people/195440867@N03/">flickr</a></li>
+        </ul>
+
+        <div class=" navBarInner navBarInnerAnimaiton ">
+            <ul>
+                
+                <li><a href="#" class="navColor">日式</a></li>
+                <li><a href="#" class="navColor">其他</a></li>
+            </ul>
+            <div id="InnerBarLine1"></div>
+            <div id="InnerBarLine2"></div>
+        </div>
+    </nav>
+    <!-- <p>mobile</p> -->
+    <div id="phoneNav">
+        <div id="phnoeNavLogo">NAGI</div>
+        <!-- <div class="hambergur">
+            <div id="navLine1"></div>
+            <div id="navLine2"></div>
+        </div> -->
+        <input type="checkbox" id="hambergurCheckbox">
+        <label for="hambergurCheckbox">
+            <div class="hambergur">
+                <span></span>
+                <span></span>
+            </div>
+        </label>
+
+        <div class="phoneNavContent">
+            <ul>
+                <li id="phoneNavContent1"><a href="./index.html">首頁</a></li>
+                <li><a href="./about.html">關於</a></li>
+                <li><a href="./works.html">作品</a></li>
+            </ul>
+            <div class="Phoneicon">
+                    <a href="https://www.facebook.com/profile.php?id=100015813270075">FB</a>
+                    <a href="https://www.instagram.com/ph_nagi/">IG</a>
+                    <a href="https://www.flickr.com/people/195440867@N03/">FK</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container containerBox " id="content1">
+        <p>聯絡</p>
+        <div class="row  bigRow">
+            <div class="col-4 formTitle">
+                <ul>
+                    <li>姓名</li>
+                    <li>手機</li>
+                    <li>連絡方式</li>
+                    <li>gmail</li>
+                    <li>內容</li>
+                </ul>
+            </div>
+            <div class="col-8 formColG">
+                <form class="row g-3 formRow" id="PcForm1" action="javascript:PCForm();">
+                    <div class="col-md-12 formCol">
+                      <!-- <label for="inputEmail4" class="form-label">Email</label> -->
+                      <input type="text" class="form-control" id="inputName">
+                    </div>
+                    <div class="col-md-12 formCol">
+                      <!-- <label for="inputPassword4" class="form-label">Password</label> -->
+                      <input type="tel" class="form-control" id="inputPhone">
+                    </div>
+                    <div class="col-12 formCol">
+                      <!-- <label for="inputAddress" class="form-label">Address</label> -->
+                      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                    </div>
+                    <div class="col-12 formCol">
+                      <!-- <label for="inputAddress2" class="form-label">Address 2</label> -->
+                      <input type="email" class="form-control" id="inputemail" placeholder="Apartment, studio, or floor">
+                    </div>
+                    <div class="col-md-12 formCol">
+                      <!-- <label for="inputCity" class="form-label">City</label> -->
+                      <textarea class="form-control" placeholder="Leave a comment here" id="PCTextarea"></textarea>
+                      
+                    </div>
+<!--         
+                    <div class="col-md-12 formCol">
+                      
+                      <input type="text" class="form-control" id="inputZip">
+                    </div> -->
+        
+                    <!-- <div class="col-12">
+                      <button type="submit" class="btn btn-primary">Sign in</button>
+                    </div> -->
+                  </form>
+
+            </div>
+
+        </div>
+        <div class="btnCol">
+          <button class="btn btn-primary btn3" type="submit">提交</button>
+        </div>
+    </div>
+
+    <div class="container phContainerBox " id="content2" >
+        
+        <form class="row g-3 needs-validation" novalidate action="javascript:GoForm();">
+            <div class="col-12">
+                <p>聯絡</p>
+            </div>
+            <div class="col-12">
+              <label for="validationCustom01" class="form-label">姓名</label>
+              <input type="text" class="form-control" id="validationCustom01" name="Name" value="" placeholder="姓名"  required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+            <div class="col-12">
+              <label for="validationCustom02" class="form-label">手機</label>
+              <input type="tel"  class="form-control" id="validationCustom02" name="Phone" placeholder="電話"  required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+            <div class="col-12">
+              <label for="validationCustomUsername" class="form-label">地址</label>
+              <div class="input-group has-validation">
+                
+                <input type="text" class="form-control" id="validationCustomUsername" name="Add" placeholder="地址"  aria-describedby="inputGroupPrepend" required>
+                <div class="invalid-feedback">
+                  Please provide a valid city.
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <label for="validationCustom03" class="form-label">gmail</label>
+              <input type="email" class="form-control" name="Email" placeholder="Email" id="validationCustom03" required>
+              <div class="invalid-feedback">
+                Please provide a valid city.
+              </div>
+            </div>
+            <div class="col-12">
+              <label for="validationCustom04" class="form-label">內容</label>
+              <div class="col-12 formCol textarea1">
+                <!-- <label for="inputCity" class="form-label">City</label> -->
+                <textarea class="form-control PhComment" placeholder="Leave a comment here"name="your-message" value="" id="floatingTextarea"></textarea>
+                
+              </div>
+              <div class="invalid-feedback">
+                Please select a valid state.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <button class="btn btn-primary Pbtn" type="submit">提交</button>
+            </div>
+          </form>
+        
+    </div>
+
+
+
+    <div id="homepageContainer6">
+        <div class="container-fluid footerContainer">
+            <div class="row justify-content-center">
+                <div class="col-12 col-xl-4 " >
+                    <div id="footer1">
+                        <div id="footerlogo">NAGI</div>
+                        <h4>contact</h4>
+                        <div id="footer1content">
+                            <p>TEL:091959413654</p>
+                            <p>e-mail:ansjis@gmail.com</p>
+                            <p>IG:ph_nagi</p>
+                            <p>FB:nagi</p>
+                            <p>ADD:桃園市中壢區某某街125巷31號</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-12 col-xl-4" >
+                    <div id="footer2">
+                        <p id="follow">FOLLOW</p>
+                        <div id="footer2Content">
+                            <p id="footerFB"><a href="https://www.facebook.com/profile.php?id=100015813270075">FB</a></p>
+                            <div id="footerLine"></div>
+                            <p id="footerIG"><a href="https://www.instagram.com/ph_nagi/">IG</a></p>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                <div class="col-12 col-xl-4">
+                    <div  id="footer3">
+                        <div id="footerNav">
+                            <ul>
+                                <li><a href="./works.html">作品</a>
+                                    <!-- <div  id="footerNavInner">
+                                        <ul id="footerNavInnerUl">
+                                            <li><a href="#" id="footerNavInnerLi1">日式</a></li>
+                                            <li><a href="#" id="footerNavInnerLi2">其他</a></li>
+                                        </ul>
+                                    </div> -->
+                                </li>
+                                <li><a href="./about.html">關於</a></li>
+                                <li><a href="./contact.html">首頁</a></li>
+                            </ul>
+ 
+     
+                            
+                        </div>
+                        <div id="footerFinal">OMOSHIROI</div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="./js/vue.js"></script>
+    <script src="./js/contact.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollToPlugin.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- <script src="./js/nav.js"></script> -->
+    <script src="./js/nav1.js"></script>
+    <script>
+    
+    let commenttElement = document.querySelector(".PhComment");
+    comment = commenttElement.value;
+    console.log(commenttElement);
+    let Pbtn = document.querySelector(".Pbtn");
+    Pbtn.addEventListener("mouseenter", () => {
+      console.log(comment);
+    });
+
+    let btn3 = document.querySelector(".btn3");
+    console.log(btn3);
+    btn3.addEventListener("click", () => {
+      PcForm();
+    });
+    function GoForm() { //這裡要對應到自己的 javascript 名稱
+            //宣告欄位
+            var name = $("#validationCustom01").val();
+            var phone = $("#validationCustom02").val();
+            var add = $("#inputAddress").val();
+            var email = $("#inputemail").val();
+            let commenttElement = document.querySelector("#floatingTextarea");
+            comment = commenttElement.value;
+
+            $.ajax({
+                url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSc4ZCTqQw482fVcaCbA-2mKni22K-f2vOv93Gj1rOR0gtRMhg/formResponse", //Google Form 裡面的 form action 網址 ＊＊記得要填＊＊
+                data: { //Google Form 裡面的欄位 name ＊＊記得要改＊＊
+                    "entry.519748191":name,
+                    "entry.816926285":phone,
+                    "entry.796103154":add,
+                    "entry.1370375309":email,
+                    "entry.30676074":comment,
+                },
+                type: "POST",
+                dataType: "xml",
+                statusCode: {
+                    0: function () {
+                        alert("已送出!"); //完成送出表單的警告視窗
+                    },
+                    200: function () {
+                        alert("已送出!"); //完成送出表單的警告視窗
+                    }
+                }
+            });
+      }
+
+
+
+      function PcForm() { //這裡要對應到自己的 javascript 名稱
+            //宣告欄位
+            var name = $("#inputName").val();
+            var phone = $("#inputPhone").val();
+            var add = $("#inputPhone").val();
+            var email = $("#validationCustom03").val();
+            let commenttElement = document.querySelector("#PCTextarea");
+            comment = commenttElement.value;
+
+            $.ajax({
+                url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSc4ZCTqQw482fVcaCbA-2mKni22K-f2vOv93Gj1rOR0gtRMhg/formResponse", //Google Form 裡面的 form action 網址 ＊＊記得要填＊＊
+                data: { //Google Form 裡面的欄位 name ＊＊記得要改＊＊
+                    "entry.519748191":name,
+                    "entry.816926285":phone,
+                    "entry.796103154":add,
+                    "entry.1370375309":email,
+                    "entry.30676074":comment,
+                },
+                type: "POST",
+                dataType: "xml",
+                statusCode: {
+                    0: function () {
+                        alert("已送出!"); //完成送出表單的警告視窗
+                    },
+                    200: function () {
+                        alert("已送出!"); //完成送出表單的警告視窗
+                    }
+                }
+            });
+        }
+
+
+      // function submitHandler(){
+
+      //   let to = "angus.5267@gmail.com";
+
+
+      //   let nameElement = document.querySelector("#validationCustom01");
+      //   name = nameElement.value;
+      //   console.log(name);
+
+      //   let PhoneElement = document.querySelector("#validationCustom02");
+      //   Phone = PhoneElement.value;
+
+      //   let AddElement = document.querySelector("#validationCustomUsername");
+      //   Add = AddElement.value;
+
+      //   let EmailElement = document.querySelector("#validationCustom03");
+      //   Email = EmailElement.value;
+
+      //   //floatingTextarea
+
+      //   let commenttElement = document.querySelector("#floatingTextarea");
+      //   comment = commenttElement.value;
+
+        
+
+      // }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+.containerBox {
+  margin-top: 10vh;
+}
+.containerBox p {
+  font-size: 30px;
+  letter-spacing: 30px;
+  margin: 0;
+  height: 50px;
+  margin-right: 20px;
+  white-space: nowrap;
+}
+.containerBox .bigRow {
+  width: 80vw;
+  display: flex;
+}
+.containerBox .formTitle {
+  display: flex;
+  align-items: center;
+  height: 80vh;
+}
+.containerBox .formTitle ul {
+  margin: 0;
+  padding: 0%;
+  list-style: none;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.containerBox .formTitle ul li {
+  letter-spacing: 20px;
+}
+.containerBox .formTitle ul li + li {
+  margin-top: 65px;
+}
+.containerBox .formColG {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.containerBox .formColG .formRow {
+  width: 80vw;
+}
+.containerBox .formColG .formRow .formCol {
+  display: flex;
+}
+.containerBox .formColG .formRow .formCol input {
+  width: 600px;
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+  border-bottom: 1.5px solid black;
+}
+.containerBox .formColG .formRow .formCol input:focus {
+  box-shadow: none;
+}
+.containerBox .formColG .formRow .formCol textarea {
+  width: 600px;
+  border-radius: 0;
+  background-color: transparent;
+  border: 1.5px solid black;
+}
+.containerBox .formColG .formRow .formCol textarea:focus {
+  box-shadow: none;
+}
+.containerBox .formColG .formRow .formCol + .formCol {
+  margin-top: 50px;
+}
+.containerBox .btnCol {
+  width: 80vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.containerBox .btnCol .btn {
+  background-color: transparent;
+  color: black;
+  border-radius: 0;
+  border: 1.5px solid black;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 100px;
+  padding-left: 100px;
+  letter-spacing: 20px;
+}
+
+.phContainerBox {
+  margin-top: 15vh;
+  display: none;
+  padding: 30px;
+}
+.phContainerBox p {
+  font-size: 30px;
+  letter-spacing: 30px;
+  margin: 0;
+  height: 50px;
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
+.phContainerBox form .col-12 input {
+  border-radius: 0;
+  border: none;
+  border-bottom: 1.5px solid black;
+}
+.phContainerBox form .col-12 input:focus {
+  box-shadow: none;
+}
+.phContainerBox form .col-12 textarea {
+  border-radius: 0;
+  border: none;
+  border-bottom: 1.5px solid black;
+}
+.phContainerBox form .col-12 textarea:focus {
+  box-shadow: none;
+}
+.phContainerBox form .col-12 button {
+  border-radius: 0;
+  background-color: transparent;
+  color: black;
+  border: 1.5px solid black;
+  width: 200px;
+  letter-spacing: 20px;
+  padding-left: 30px;
+}
+.phContainerBox form .col-12 + .col-12 {
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 882px) {
+  .containerBox {
+    display: none;
+  }
+  .phContainerBox {
+    display: flex;
+  }
+}
+@media screen and (max-width: 989px) {
+  .containerBox {
+    margin: 0;
+    margin-top: 20vh;
+    margin-left: 5vw;
+  }
+  .btnCol {
+    margin-left: 30vw;
+  }
+}/*# sourceMappingURL=contact.css.map */

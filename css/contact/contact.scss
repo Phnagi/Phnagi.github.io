@@ -1,0 +1,169 @@
+.containerBox{
+    margin-top: 10vh;
+    p{
+        font-size: 30px;
+        letter-spacing: 30px;
+        margin: 0;
+        height: 50px;
+        margin-right:20px;
+        white-space:nowrap;
+        // background-color: antiquewhite;
+    }
+    .bigRow{
+        width: 80vw;
+        // background-color: beige;
+        display: flex;
+        
+    }
+    .formTitle{
+        display: flex;
+        
+        align-items: center;
+        height: 80vh;
+        ul{
+            margin: 0;
+            padding: 0%;
+            list-style: none;
+            
+            height: 100%;
+            // background-color: aqua;
+            display: flex;
+            justify-content: center;
+            
+            flex-direction: column;
+            li{
+                
+                letter-spacing: 20px;
+            }
+            li + li{
+                margin-top: 65px;
+            }
+        }
+    }
+    .formColG{
+        height: 80vh;
+        // background-color: antiquewhite;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .formRow{
+            // margin-top: 20vh;
+            width: 80vw;
+    
+            .formCol{
+                display: flex;
+    
+                
+                input{
+                  
+                  width: 600px;
+                  border:none;
+                  border-radius: 0;
+                  background-color: transparent;
+                  border-bottom: 1.5px solid black;
+                }
+                input:focus{
+                    box-shadow: none;
+
+                }
+
+                textarea{
+                    
+                    width: 600px;
+                    
+                    border-radius: 0;
+                    background-color: transparent;
+                    border: 1.5px solid black;
+                }
+                textarea:focus{
+                    box-shadow: none;
+                }
+
+            }
+            .formCol + .formCol {
+                margin-top: 50px;
+            }
+        }
+    }
+    .btnCol{
+        width: 80vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .btn{
+            background-color: transparent;
+            color: black;
+            border-radius: 0;
+            border: 1.5px solid black;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-right: 100px;
+            padding-left: 100px;
+            letter-spacing: 20px;
+        }
+    }
+
+}
+.phContainerBox{
+    margin-top: 15vh;
+    display: none;
+    padding: 30px;
+    p{
+        font-size: 30px;
+        letter-spacing: 30px;
+        margin: 0;
+        height: 50px;
+        margin-bottom: 10px;
+        white-space:nowrap;
+    }
+    form{
+        .col-12{
+            input{
+                border-radius: 0;
+                border: none;
+                border-bottom: 1.5px solid black;
+            }
+            input:focus{
+                box-shadow: none;
+            }
+            textarea{
+                border-radius: 0;
+                border: none;
+                border-bottom: 1.5px solid black;
+            }
+            textarea:focus{
+                box-shadow: none;
+            }
+            button{
+                border-radius: 0;
+                background-color: transparent;
+                color: black;
+                border: 1.5px solid black;
+                width: 200px;
+                letter-spacing: 20px;
+                padding-left: 30px;
+            }
+        }
+        .col-12 + .col-12 {
+            margin-top:50px ;
+        }
+    }
+}
+@media screen and (max-width: 882px){
+    .containerBox{
+        display: none;
+    }
+    .phContainerBox{
+        display: flex;
+    }
+}
+@media screen and (max-width: 989px){
+    .containerBox{
+        margin: 0;
+        margin-top: 20vh;
+        margin-left: 5vw;
+    }
+    .btnCol{
+        margin-left: 30vw;
+    }
+}
